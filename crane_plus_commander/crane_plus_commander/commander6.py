@@ -162,7 +162,7 @@ def main():
     commander.send_goal_gripper(from_gripper_ratio(1), 1)
     print('サービスサーバ待機')
 
-    # Ctrl+cでエラーにならないようにKeyboardInterruptを捕まえる
+    # Ctrl+CでエラーにならないようにKeyboardInterruptを捕まえる
     try:
         executor = MultiThreadedExecutor()
         rclpy.spin(commander, executor)
